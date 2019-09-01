@@ -1,6 +1,10 @@
 import React, {Component} from 'react';
 import TodoItem from './TodoItem';
 import uuid from 'uuidv4';
+<<<<<<< HEAD
+=======
+import axios from 'axios';
+>>>>>>> backend
 
 class SearchBar extends Component{
     constructor(props){
@@ -38,6 +42,20 @@ class SearchBar extends Component{
         if(!value){
             return;
         }
+<<<<<<< HEAD
+=======
+
+        
+        axios.get('http://localhost:8000/api/data.php?action=read')
+        .then(response => {
+        console.log(response.data);
+        })
+        .catch(error => {
+        console.log(error);
+        })
+        
+
+>>>>>>> backend
         let newTodo = {
             todo: this.state.value,
             id: Math.random() * 1000
@@ -70,6 +88,10 @@ class SearchBar extends Component{
         this.setState({
             todos: editedTodos
         })
+<<<<<<< HEAD
+=======
+        
+>>>>>>> backend
     }
     render(){
         console.log('this.state.todos ', this.state.todos);
