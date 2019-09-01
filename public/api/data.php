@@ -2,7 +2,8 @@
 header("Access-Control-Allow-Origin: *");
 header('Access-Control-Allow-Methods: GET, POST');
 
-if((empty($_POST["action"]))){
+
+if((empty($_GET["action"]))){
 	exit("no action specified");
 }
 
@@ -13,7 +14,7 @@ $output = [
 	"errors"=>[]
 ];
 
-switch($_POST["action"]){
+switch($_GET["action"]){
 	case "read":
 		include("data_api/read.php");
 		break;

@@ -1,8 +1,8 @@
 <?php
-require_once("mysql_connect.php");
+require_once("../api/mysql_connect.php");
 
-$todo_id = $_POST["id"];
-$todo_name = $_POST["todo"];
+$todo_id = $_GET["id"];
+$todo_name = $_GET["todo"];
 
 $query = "INSERT INTO `dh_todo` (`todo`)
 			VALUES ('$todo_name')";

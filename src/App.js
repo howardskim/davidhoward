@@ -1,6 +1,12 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+<<<<<<< Updated upstream
+=======
+import axios from 'axios';
+import SearchBar from './SearchBar';
+>>>>>>> Stashed changes
+
 
 function App() {
   return (

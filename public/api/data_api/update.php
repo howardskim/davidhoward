@@ -1,13 +1,13 @@
 <?php
-require_once("mysql_connect.php");
+require_once("../api/mysql_connect.php");
 
-if(empty($_POST["id"]) || empty($_POST["todo"])) {
+if(empty($_GET["id"]) || empty($_GET["todo"])) {
     $output["errors"] = "Edit Failed";
   }
 
 
-$id = $_POST["id"];
-$todo = $_POST["todo"];
+$id = $_GET["id"];
+$todo = $_GET["todo"];
 
 $query = "UPDATE `dh_todo` SET `id` = '$id', `todo` = '$todo'";
 $result = mysqli_query($conn, $query);

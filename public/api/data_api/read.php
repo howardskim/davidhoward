@@ -1,7 +1,7 @@
 <?php
 require_once("mysql_connect.php");
 
-$query = "SELECT * FROM `dh_todo`";
+$query = "SELECT `id`, `todo` FROM `list`";
 
 $result = mysqli_query($conn, $query);
 

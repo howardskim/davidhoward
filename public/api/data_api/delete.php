@@ -1,5 +1,5 @@
 <?php
-require_once("mysql_connect.php");
+require_once("../api/mysql_connect.php");
 
 if((empty($_POST["id"]))){
 	exit("no ID specified");
