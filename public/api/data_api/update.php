@@ -9,7 +9,7 @@ if(empty($_GET["id"]) || empty($_GET["todo"])) {
 $id = $_GET["id"];
 $todo = $_GET["todo"];
 
-$query = "UPDATE `list` SET `id` = '$id', `todo` = '$todo'";
+$query = "UPDATE `list` SET `todo` = '$todo' WHERE `id` = '$id'";
 $result = mysqli_query($conn, $query);
 
 if(empty($result)) {
