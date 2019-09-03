@@ -24,6 +24,15 @@ class SearchBar extends Component{
             ]
         }
     }
+    componentDidMount(){
+        axios.get('http://localhost:8000/api/data.php?action=read').then((resp) => {
+            console.log('resp ', resp)
+            this.setState({
+                todos: resp.data.data
+            })
+        })
+
+    }
     handleInput = (e) => {
         let typed = e.target.value;
         if(typed.length >= 50){
@@ -39,14 +48,8 @@ class SearchBar extends Component{
         if(!value){
             return;
         }
-
-        
-        axios.get('http://localhost:8000/api/data.php?action=read')
-        .then(response => {
-        console.log(response.data);
-        })
-        .catch(error => {
-        console.log(error);
+        axios.get(`http://localhost:8000/api/data.php?action=insert&todo=${value}`).then((resp) =>{
+            console.log(resp)
         })
         
 

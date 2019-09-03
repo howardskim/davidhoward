@@ -4,7 +4,7 @@ require_once("../api/mysql_connect.php");
 $todo_id = $_GET["id"];
 $todo_name = $_GET["todo"];
 
-$query = "INSERT INTO `dh_todo` (`todo`)
+$query = "INSERT INTO `list` (`todo`)
 			VALUES ('$todo_name')";
 
 $result = mysqli_query($conn, $query);

@@ -1,13 +1,13 @@
 <?php
 require_once("../api/mysql_connect.php");
 
-if((empty($_POST["id"]))){
+if((empty($_GET["id"]))){
 	exit("no ID specified");
 }
 
-$id = $_POST["id"];
+$id = $_GET["id"];
 
-$query = "DELETE FROM `dh_todo` WHERE `id` = $id";
+$query = "DELETE FROM `list` WHERE `id` = $id";
                 
 $result = mysqli_query($conn, $query);
 
